@@ -1,3 +1,5 @@
+//this is [] binary
+
 public class binarySearch {
     public int search(int[] nums, int target) {
         if(target < nums[0] || target > nums[nums.length - 1]){
