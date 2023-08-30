@@ -8,6 +8,7 @@ public class interactionArrayUsingPoints {
         int length1 = nums1.length;
         int length2 = nums2.length;
         int[] intersection = new int[length1 + length2];
+        //i don't know length1 and length2, which one is longer, so + them both
 
         int target = 0;//why
         int left = 0, right = 0;//left and right point for the two nums
@@ -19,7 +20,7 @@ public class interactionArrayUsingPoints {
                 if(target == 0 || num1 != intersection[target - 1]){
                     intersection[target] = num1;
                     target ++;//collect the target number
-                    //make sure this number didn't happens before
+                    //make sure this number didn't happen before
                 }//why target == 0?
                 left++;
                 right++;
