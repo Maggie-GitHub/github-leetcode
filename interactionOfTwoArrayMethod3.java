@@ -16,15 +16,15 @@ public class interactionOfTwoArrayMethod3 {
         List<Integer> reList = new ArrayList<>();
         for(int i = 0; i < 1002; i++){
             if(hash1[i] > 0 && hash2[i] > 0){
-                reList.add(i);//how do they know if the numser is 1
+                reList.add(i);//how do they know if the number is 1
             }
         }
         int index = 0;
-        int res[] = new int[reList.size()];
+        int res[] = new int[reList.size()];//new array to collect the result
         for(int i : reList){
             res[index] = i;
             index++;
-        }
+        }//maybe just remeber this way to solve the problem
         return res;
     }
 }
