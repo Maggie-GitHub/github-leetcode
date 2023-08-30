@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class interactionOfTwoArrayMethod3 {
@@ -7,10 +8,8 @@ public class interactionOfTwoArrayMethod3 {
         int[] hash2 = new int[1003];
         //the question says the max length is 1000
 
-        for(int i : nums1)
-            hash1[i]++;
-        for(int i : nums2)
-            hash2[i]++;
+        Arrays.fill(hash1, 1);
+        Arrays.fill(hash2, 1);
         //find the nums1 and nums2
 
         List<Integer> reList = new ArrayList<>();
