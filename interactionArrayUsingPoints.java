@@ -9,24 +9,26 @@ public class interactionArrayUsingPoints {
         int length2 = nums2.length;
         int[] intersection = new int[length1 + length2];
 
-        int index = 0, index1 = 0, index2 = 0;
+        int target = 0;//why
+        int left = 0, right = 0;//left and right point for the two nums
 
-        while(index1 < length1 && index2 < length2){
-            int num1 = nums1[index1], num2 = nums2[index2];
+        while(left < length1 && right < length2){//comes to the end, stop
+            int num1 = nums1[left], num2 = nums2[right];
             //start from the first index of this array
             if(num1 == num2){
-                if(index == 0 || num1 != intersection[index - 1]){
-                    intersection[index++] = num1;
+                if(target == 0 || num1 != intersection[target - 1]){
+                    intersection[target] = num1;
+                    target ++;//collect the target number
                     //make sure this number didn't happens before
-                }//why index == 0?
-                index1++;
-                index2++;
+                }//why target == 0?
+                left++;
+                right++;
             } else if(num1 < num2){
-                index1++;
+                left++;
             } else {
-                index2++;
+                right++;
             }
         }
-        return Arrays.copyOfRange(intersection, 0, index);
+        return Arrays.copyOfRange(intersection, 0, target);
     }
 }
