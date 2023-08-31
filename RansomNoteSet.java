@@ -7,10 +7,10 @@ public class RansomNoteSet {
         int[] record = new int[26];//totally 26 characters
 
         for(char m : magazine.toCharArray()){
-            record[m - 'a'] += 1;
+            record[m - 'a'] += 1;//见mag里的就加1
         }
         for(char r : ransomNote.toCharArray()){
-            record[r - 'a'] -= 1;
+            record[r - 'a'] -= 1;//见ran里的就减1
         }
 
         for(int i : record){
