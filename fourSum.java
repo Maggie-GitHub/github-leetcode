@@ -37,5 +37,7 @@ public class fourSum  {
             }
         }
         System.out.println("Final Result: " + res);
+        //Final Result: 3
+        //-5 once, -6 twice, so final result = 3
     }
 }
