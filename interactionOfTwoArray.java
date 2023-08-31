@@ -9,7 +9,7 @@ public class interactionOfTwoArray {
         Set<Integer> set = new HashSet<>();
         Set<Integer> reset = new HashSet<>();
 
-        for(int i : nums1){//fine the nums from nums1
+        for(int i : nums1){//find the nums from nums1
             set.add(i);
         }
         for(int i : nums2){//find the nums1's num happens in nums2
