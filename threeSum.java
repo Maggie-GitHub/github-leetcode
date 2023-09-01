@@ -9,7 +9,7 @@ public class threeSum {
 
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) {
-                return result;
+                return result;//which is empty
             }
 
             if (i > 0 && nums[i] == nums[i - 1]) {
@@ -19,7 +19,9 @@ public class threeSum {
             int left = i + 1;
             int right = nums.length - 1;
 
-            while (right > left) {
+            while (right > left) {//why not =
+                //since the array is sorted, this would not give us a valid triplet that sums to zero.
+                //then how about -2, 1, 1?
                 int sum = nums[i] + nums[left] + nums[right];
                 if (sum > 0) {
                     right--;
@@ -28,8 +30,8 @@ public class threeSum {
                 } else {//=
                     result.add(Arrays.asList(nums[i], nums[left], nums[right]));
                     while (right > left && nums[right] == nums[right - 1]) {
-                        right--;
-                    }
+                        right--;//why right > left is necessary
+                    }//prevent accessing elements outside the array bounds
                     while (right > left && nums[left] == nums[left + 1]) {
                         left++;
                     }
