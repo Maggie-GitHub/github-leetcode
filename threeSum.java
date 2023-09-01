@@ -13,7 +13,7 @@ public class threeSum {
             }
 
             if (i > 0 && nums[i] == nums[i - 1]) {
-                continue;
+                continue;//why nums[i] == nums[i - 1]就去重了呢
             }//i > 0 is because i will - 1 later, so i should at least > 0
 
             int left = i + 1;
@@ -33,7 +33,7 @@ public class threeSum {
                         right--;//why right > left is necessary
                     }//prevent accessing elements outside the array bounds
                     while (right > left && nums[left] == nums[left + 1]) {
-                        left++;
+                        left++;//i understand but still need to think about the -1/+1's meaning and why
                     }
                     right--;
                     left++;
