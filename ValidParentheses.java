@@ -18,7 +18,7 @@ public class ValidParentheses {
                 stack.push('}');
             } else if(stack.empty() || stack.peek() != s.charAt(i)){
                 return false;
-            } else{
+            } else{// st.top() 与 s[i]相等，栈弹出元素
                 stack.pop();
             }
         }
