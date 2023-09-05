@@ -7,14 +7,15 @@ public class RomoveDuplicates {
         for(int i = 0; i < s.length(); i++){
             ch = s.charAt(i);
             if(deque.isEmpty() || deque.peek() != ch){
-                deque.push(ch);
+                //if deque is empty, or the top element in deque doesn't match with the ch
+                deque.push(ch);//then add element into deque
             } else {
-                deque.pop();
+                deque.pop();//if matches, pop
             }
         }
         String result = "";
-        while(!deque.isEmpty()){
-            result = deque.pop() + result;
+        while(!deque.isEmpty()){//stop when the deque is empty
+            result = deque.pop() + result;//add until empty
         }
         return result;
     }
